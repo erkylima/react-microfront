@@ -1,0 +1,34 @@
+version: '3.3'
+services:
+  faq:
+    build:
+      context: faq-app/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3003:3003'
+    volumes:
+      - ./faq-app:/app
+  dashboard:
+    build:
+      context: dashboard-app/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3002:3002'
+    volumes:
+      - ./dashboard-app:/app  
+  header:
+    build:
+      context: header-app/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3001:3001'
+    volumes:
+      - ./header-app:/app
+  home:
+    build:
+      context: home-app/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./home-app:/app  
