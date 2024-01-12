@@ -1,6 +1,6 @@
-# React Admin Dashboard Material UI with Webpack 5
+# React + Admin Dashboard + Material UI and Webpack 5 Module Federation
 
-A implementation of React 18 with Admin Dashboard using Material UI and Webpack 5 that includes Modules Federation.
+This system seamlessly integrates modular components, allowing for efficient code splitting and loading only the necessary resources on-demand. The Material UI design system ensures a sleek and responsive user interface, while the Webpack 5 Module Federation enhances scalability by enabling the sharing of modules across different micro-frontends. With real-time data updates and a user-friendly interface, this dashboard provides an intuitive and visually appealing experience for users navigating complex datasets.
 
 <img src="https://raw.githubusercontent.com/erkylima/react-microfront/main/imgs/img1.jpg" width="500" />
 
