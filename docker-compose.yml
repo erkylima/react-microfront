@@ -6,32 +6,26 @@ services:
       dockerfile: Dockerfile.dev
     ports:
       - '3003:3003'
-    volumes:
-      - ./faq-app:/app
+
   dashboard:
     build:
       context: dashboard-app/
       dockerfile: Dockerfile.dev
     ports:
       - '3001:3001'
-    volumes:
-      - ./dashboard-app:/app  
+
   sidebar:
     build:
       context: sidebar/
       dockerfile: Dockerfile.dev
     ports:
       - '3002:3002'
-    volumes:
-      - ./sidebar:/app
   root:
     build:
       context: root/
       dockerfile: Dockerfile.dev
     ports:
-      - '3000:3000'
-    volumes:
-      - ./root:/app  
+      - '3000:3000' 
     depends_on:
       - sidebar
 

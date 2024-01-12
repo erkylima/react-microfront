@@ -3,7 +3,8 @@ FROM node:21.5.0-alpine
 WORKDIR '/app'
 
 COPY package.json .
-RUN yarn install
+
+RUN rm -rf node_modules/ && yarn
 
 COPY . .
 
