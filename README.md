@@ -2,7 +2,7 @@
 
 A implementation of React 18 with Admin Dashboard using Material UI and Webpack 5 that includes Modules Federation.
 
-<img src="#" width="500" />
+<img src="https://raw.githubusercontent.com/erkylima/react-microfront/main/imgs/img1.jpg" width="500" />
 
 ## Introduction
 
