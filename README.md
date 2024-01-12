@@ -13,7 +13,8 @@ This project was based on the implementation [Dashboard](https://codesandbox.io/
 To run this project use docker-compose to quickstart:
 
 > ```
-> git clone https://github.com/erkylima/react-microfront.git
+> git clone https://github.com/erkylima/react-microapps.git
+> cd react-microapps
 > docker-compose up
 > ```
 
