@@ -1,5 +1,11 @@
 version: '3.3'
 services:
+  team:
+    build:
+      context: team-app/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3004:3004'
   faq:
     build:
       context: faq-app/

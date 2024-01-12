@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 const Nav = lazy(() => import("Nav/Nav"));
 const FAQ = lazy(() => import('FAQ/FAQ'));
 const Dashboard = lazy(() => import('Dashboard/Dashboard'));
+const Team = lazy(() => import('Team/team'));
 
 
 export default function () {
@@ -22,6 +23,11 @@ export default function () {
               <Route path="faq" element={
               <React.Suspense fallback={<div>Loading...</div>}>
                 <FAQ />
+              </React.Suspense>
+                } />
+              <Route path="team" element={
+              <React.Suspense fallback={<div>Loading...</div>}>
+                <Team />
               </React.Suspense>
                 } />
               <Route path="*" element={<h2>Page Not Found</h2>} />
