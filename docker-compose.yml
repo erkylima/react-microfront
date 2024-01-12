@@ -13,20 +13,20 @@ services:
       context: dashboard-app/
       dockerfile: Dockerfile.dev
     ports:
-      - '3002:3002'
-    volumes:
-      - ./dashboard-app:/app  
-  header:
-    build:
-      context: header-app/
-      dockerfile: Dockerfile.dev
-    ports:
       - '3001:3001'
     volumes:
-      - ./header-app:/app
-  home:
+      - ./dashboard-app:/app  
+  sidebar:
     build:
-      context: home-app/
+      context: sidebar/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3002:3002'
+    volumes:
+      - ./sidebar:/app
+  root:
+    build:
+      context: root/
       dockerfile: Dockerfile.dev
     ports:
       - '3000:3000'
