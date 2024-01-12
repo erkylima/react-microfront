@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
+    assetModuleFilename: 'images/[hash].[ext]'
   },
   devServer: {
     port: 3002,
@@ -30,7 +31,11 @@ module.exports = {
             },
             },
         ],
-      },      
+      },
+      {
+        test: /\.png/,
+        type: 'asset/resource',
+      },
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],

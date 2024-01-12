@@ -25,6 +25,9 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import SwitchRightOutlinedIcon from "@mui/icons-material/SwitchRightOutlined";
 import SwitchLeftOutlinedIcon from "@mui/icons-material/SwitchLeftOutlined";
+
+import img from '../../../public/assets/user.png';
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -144,7 +147,7 @@ const MyProSidebar = () => {
                   alt="profile user"
                   width="100px"
                   height="100px"
-                  src={"../../assets/user.png"}
+                  src={img}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>

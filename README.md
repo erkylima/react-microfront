@@ -1,21 +1,23 @@
-# Module Federation Demo
+# React Admin Dashboard Material UI with Webpack 5
 
-A simple demo on Microfrontend with Module Federation in React
+A implementation of React 18 with Admin Dashboard using Material UI and Webpack 5 that includes Modules Federation.
 
-<img src="https://user-images.githubusercontent.com/19681625/221417269-59fb9cb9-2d8a-4e05-8a54-562679aec22b.png" width="500" />
+<img src="#" width="500" />
 
 ## Introduction
 
-I have a detailed tutorial on: https://medium.com/@samho1996/microfrontend-with-module-federation-in-react-98b72b347238
+This project was based on the implementation [Dashboard](https://codesandbox.io/p/sandbox/react-dashboard-pnm6fh)
 
 ## Getting started
 
-In the project directory, run:
+To run this project use docker-compose to quickstart:
 
 > ```
-> cd header-app && yarn && yarn start
-> cd home-app && yarn && yarn start
+> git clone https://github.com/erkylima/react-microfront.git
+> docker-compose up
 > ```
 
-Open [http://localhost:3000](http://localhost:3000) to view module federated Home App\
-Open [http://localhost:3001](http://localhost:3000) to view module federated Header App
+Open [http://localhost:3000](http://localhost:3000) to view module federated Root App\
+Open [http://localhost:3001](http://localhost:3001) to view module federated Dashboard App\
+Open [http://localhost:3002](http://localhost:3002) to view module federated Navigation App\
+Open [http://localhost:3003](http://localhost:3003) to view module federated FAQ App
