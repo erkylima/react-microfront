@@ -3,6 +3,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const dependencies = require("./package.json").dependencies;
+var WebpackPwaManifest = require('webpack-pwa-manifest')
 
 module.exports = {
   entry: "./src/index.js",
@@ -60,7 +61,21 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      filename: "index.html",
+      title: 'Progressive Web Application',
+    }),
+    new WebpackPwaManifest({
+      name: 'My Progressive Web App',
+      short_name: 'MyPWA',
+      description: 'My awesome Progressive Web App!',
+      background_color: '#ffffff',
+      crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+      icons: [
+        {
+          src: path.resolve('public/apple-touch-icon.png'),
+          sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
+        },
+        
+      ]
     }),
     new MiniCssExtractPlugin(),
     new ModuleFederationPlugin({
