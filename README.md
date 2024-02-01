@@ -23,4 +23,4 @@ Open [http://localhost:3000](http://localhost:3000) to view Webpack 5 module fed
 Open [http://localhost:3001](http://localhost:3001) to view Webpack 5 module federated Dashboard App\
 Open [http://localhost:3002](http://localhost:3002) to view Webpack 5 module federated Navigation App\
 Open [http://localhost:3003](http://localhost:3003) to view Webpack 5 module federated FAQ App\
-Open [http://localhost:3004](http://localhost:3004) to view Webpack 5 module federated Team App
+Open [http://localhost:3004](http://localhost:3004) to view Rspack module federated Team App
