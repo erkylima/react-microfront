@@ -1,5 +1,11 @@
 version: '3.3'
 services:
+  contacts:
+    build:
+      context: contacts-app/
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3005:3005'
   team:
     build:
       context: team-app/
@@ -12,14 +18,12 @@ services:
       dockerfile: Dockerfile.dev
     ports:
       - '3003:3003'
-
   dashboard:
     build:
       context: dashboard-app/
       dockerfile: Dockerfile.dev
     ports:
       - '3001:3001'
-
   sidebar:
     build:
       context: sidebar/
