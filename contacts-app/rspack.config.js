@@ -54,10 +54,10 @@ module.exports = {
 			template: "./public/index.html"
 		}),
 		new ModuleFederationPlugin({
-			name: "team",
+			name: "contacts",
 			filename: "remoteEntry.js",
 			exposes: {
-				"./team":"./src/Team"
+				"./Contacts": "./src/Contacts"
 			},
 			shared: {
 				...dependencies,

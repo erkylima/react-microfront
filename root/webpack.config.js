@@ -85,7 +85,8 @@ module.exports = {
           Nav: "Nav@http://localhost:3002/remoteEntry.js",
           Dashboard: "Dashboard@http://localhost:3001/remoteEntry.js",
           FAQ: "FAQ@http://localhost:3003/remoteEntry.js",
-          Team: "team@http://localhost:3004/remoteEntry.js"
+          Team: "team@http://localhost:3004/remoteEntry.js",
+          Contacts: "team@http://localhost:3005/remoteEntry.js"
 
       },
       exposes: {},
