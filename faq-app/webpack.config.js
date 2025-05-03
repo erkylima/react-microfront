@@ -3,6 +3,11 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const { dependencies } = require("./package.json");
 const path = require('path');
 
+// Função utilitária para obter endpoint de variável de ambiente ou valor padrão
+function getRemoteUrl(envVar, defaultUrl) {
+  return process.env[envVar] || defaultUrl;
+}
+
 module.exports = {
     entry: "./src/index.js",  
     output: {
@@ -51,8 +56,8 @@ module.exports = {
             "./FAQ": "./src/FAQ",
           },
           remotes: {
-            Sidebar: "Sidebar@http://localhost:3002/remoteEntry.js",
-            Dashboard: "Dashboard@http://localhost:3001/remoteEntry.js",
+            Sidebar: `Sidebar@${getRemoteUrl('SIDEBAR_REMOTE_URL', 'http://localhost:3002/remoteEntry.js')}`,
+            Dashboard: `Dashboard@${getRemoteUrl('DASHBOARD_REMOTE_URL', 'http://localhost:3001/remoteEntry.js')}`,
           },
           shared: {
             ...dependencies,

@@ -3,7 +3,12 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const dependencies = require("./package.json").dependencies;
-var WebpackPwaManifest = require('webpack-pwa-manifest')
+var WebpackPwaManifest = require('webpack-pwa-manifest');
+
+// Função utilitária para obter endpoint de variável de ambiente ou valor padrão
+function getRemoteUrl(envVar, defaultUrl) {
+  return process.env[envVar] || defaultUrl;
+}
 
 module.exports = {
   entry: "./src/index.js",
@@ -82,12 +87,11 @@ module.exports = {
       name: "shell",
       filename: "remoteEntry.js",
       remotes: {
-          Nav: "Nav@http://localhost:3002/remoteEntry.js",
-          Dashboard: "Dashboard@http://localhost:3001/remoteEntry.js",
-          FAQ: "FAQ@http://localhost:3003/remoteEntry.js",
-          Team: "team@http://localhost:3004/remoteEntry.js",
-          Contacts: "team@http://localhost:3005/remoteEntry.js"
-
+        Nav: `Nav@${getRemoteUrl('NAV_REMOTE_URL', 'http://localhost:3002/remoteEntry.js')}`,
+        Dashboard: `Dashboard@${getRemoteUrl('DASHBOARD_REMOTE_URL', 'http://localhost:3001/remoteEntry.js')}`,
+        FAQ: `FAQ@${getRemoteUrl('FAQ_REMOTE_URL', 'http://localhost:3003/remoteEntry.js')}`,
+        Team: `team@${getRemoteUrl('TEAM_REMOTE_URL', 'http://localhost:3004/remoteEntry.js')}`,
+        Contacts: `team@${getRemoteUrl('CONTACTS_REMOTE_URL', 'http://localhost:3005/remoteEntry.js')}`
       },
       exposes: {},
       shared: {
